@@ -419,12 +419,12 @@ footer {
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 13px;
         line-height: 2.0;
         margin: 0;
         text-align: justify;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     h3 {
@@ -443,7 +443,7 @@ footer {
     }
     
     h3 li{
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 400;
         margin-bottom: 15px; 
         line-height: 1.6; 
@@ -478,7 +478,6 @@ footer {
         display: flex;
         justify-content: center; /* 수평 중앙 정렬 */
         gap: 10px; /* container와 container2 사이 간격 */
-        font-size: 14px;
         margin-left: 10px;
     }
     
@@ -508,6 +507,7 @@ footer {
         flex: 1; /* 박스의 높이를 동일하게 만듦 */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         margin-left: 0;
+        font-size: 14px;
     }
     
     .box1 {
@@ -518,6 +518,7 @@ footer {
         line-height: 1.6; /* 행간을 넓혀 가독성 향상 */
         word-break: keep-all; /* 단어가 끊기지 않도록 설정 */
         flex: 1; /* 박스의 높이를 동일하게 만듦 */
+        font-size: 10px;
     }
 
     h6 {
