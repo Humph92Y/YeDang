@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ye Dang Korean Language and Training Center located in Myanmar - TOPIK Preparation, 미얀마에 위치한 한국어 어학원 예당 - TOPIK 준비, 한국 유학 준비 과정">
+    <title>YeDang Korean Language Center</title>
+    <link rel="stylesheet" href="styles4.css">
+    <link rel="icon" href="images/logo.jpeg">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ce850c15f9.js" 
+    crossorigin="anonymous"></script>
+
+</head>
+  
+<body>
+
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <a href="index.html">
+                <img src="images/logo_transparent.png" alt="Yedang logo image" width="100" height="50">
+            </a>
+        </div>
+        
+        <div class="navbar_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#courses">Course</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar_links">
+            <div class="navbar_links">
+                <a href="https://www.facebook.com/YedangKoreanLanguage.TrainingCenter" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://maps.app.goo.gl/T7eN8KA1kTMSNK1g9" target="_blank">
+                    <i class="fa-solid fa-map"></i>
+                </a>
+            </div>
+        </div>
+
+        <button class="navbar_toggleBtn">
+          <i class="fa fa-bars"></i>
+        </button>
+
+    </nav>
+
+<script defer>
+        const toggleBtn = document.querySelector('.navbar_toggleBtn');
+        const menu = document.querySelector('.navbar_menu ul');
+    
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('active'); // 'active' 클래스 토글
+        });
+    
+        const menuLinks = document.querySelectorAll('.navbar_menu ul li a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                menuLinks.forEach(l => l.style.backgroundColor = '');
+                e.target.style.backgroundColor = '#e9ecef';
+            });
+        });
+</script>
+
+
+
+    <header>
+        <h1>Start your Korean language journey <br> with us from the very beginning! <br> 
+            <p>Ye Dang Korean Language Center</p></h1>
+    </header>
+    
+    
+
+    <h2>
+        Frequently <br> Asked <br> Questions
+        <p id="FAQ">
+        </p>
+    </h2>
+
+    <br><br><br>
+
+    <h3>Frequently Asked Questions
+        <hr style="width: 50%; height: 2px; border: none; background-color: #666;">
+    </h3>
+    <div class="faq-container">
+      <div class="faq">
+        <h4 id="question-1" class="faq-title"></h4>
+        <p id="answer-1" class="faq-text"></p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h4 id="question-2" class="faq-title"></h4>
+        <p id="answer-2" class="faq-text"></p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h4 id="question-3" class="faq-title"></h4>
+        <p id="answer-3" class="faq-text"></p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h4 id="question-4" class="faq-title"></h4>
+        <p id="answer-4" class="faq-text"></p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h4 id="question-5" class="faq-title"></h4>
+        <p id="answer-5" class="faq-text"></p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h4 id="question-6" class="faq-title"></h4>
+        <p id="answer-6" class="faq-text"></p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h4 id="question-7" class="faq-title"></h4>
+        <p id="answer-7" class="faq-text"></p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="faq">
+        <h4 id="question-8" class="faq-title"></h4>
+        <p id="answer-8" class="faq-text"></p>
+        <button class="faq-toggle">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    
+
+    <script>
+        const toggles = document.querySelectorAll(".faq-toggle");
+
+        toggles.forEach((toggle) => {
+            toggle.addEventListener("click", () => {
+                toggle.parentNode.classList.toggle("active");
+            });
+        });
+    </script>
+
+    
+
+<br><br><br><br><br>
+
+
+
+
+<script>
+  let currentLanguageIndex = 0;
+  const languages = [
+  {
+      FAQ: [
+        "What are you looking for? <br> Find quick solutions to your problems through our Frequently Asked Questions."
+      ],
+      Questions: [
+        "What types of Korean language classes does the language institute offer?",
+        "How is the TOPIK exam preparation course conducted?",
+        "What requirements are needed to enroll in a university in Korea?",
+        "What support services are provided for applying to universities in Korea?",
+        "How does the job placement service offered by the language institute work?",
+        "How much is the tuition fee, and what are the payment methods?",
+        "What essential living information is needed while living in Korea?",
+        "What steps should be taken to register at the language institute?"
+      ],
+      Answers: [
+        "We explain the purpose and content of each class so that students can easily understand them.",
+        "We provide information on the importance of the TOPIK exam and how to prepare for it.",
+        "We guide students on admission requirements, necessary documents, and recommendations.",
+        "We explain specific support details such as university applications, document preparation, and interview preparation.",
+        "We provide information on how students can find jobs and which companies we are partnered with.",
+        "We provide information on tuition fees, scholarship opportunities, and the possibility of installment payments.",
+        "We offer useful information about living in Korea, including accommodation, transportation, and living expenses.",
+        "We provide specific guidance on the registration process, required documents, and deadlines."
+      ]
+  },
+
+  {
+      FAQ: [
+        "무엇을 찾고 계신가요? <br> 자주 묻는 질문을 통해 문제에 대한 빠른 해결책을 찾아보세요."
+      ],
+      Questions: [
+        "어학원에서 제공하는 한국어 수업의 종류는 무엇인가요?",
+        "TOPIK 시험 준비 과정은 어떻게 진행되나요?",
+        "한국에서 대학에 입학하려면 어떤 조건이 필요한가요?",
+        "한국 대학에 진학하기 위해 어떤 지원 서비스를 제공하나요?",
+        "어학원에서 제공하는 일자리 알선 서비스는 어떻게 이루어지나요?",
+        "학비는 얼마이며, 지급 방법은 어떻게 되나요?",
+        "한국에서 생활하는 동안 필요한 생활 정보는 무엇인가요?",
+        "어학원에 등록하기 위해서는 어떻게 해야 하나요?"
+      ],
+      Answers: [
+        "학생들이 각 수업의 목적과 내용을 쉽게 이해할 수 있도록 설명합니다.",
+        "TOPIK 시험의 중요성과 준비 방법에 대한 정보를 제공합니다.",
+        "입학 요건, 필요한 서류, 추천서 등에 대한 정보를 안내합니다.",
+        "대학 지원, 서류 준비, 면접 준비 등 구체적인 지원 내용을 설명합니다.",
+        "학생들이 어떻게 일자리를 찾을 수 있는지, 어떤 기업과 제휴하고 있는지에 대한 정보를 제공합니다.",
+        "학비, 장학금 기회, 분할 납부 가능성 등에 대한 정보를 안내합니다.",
+        "숙소, 교통, 생활비 등 한국에서의 생활에 대한 유용한 정보를 제공합니다.",
+        "등록 절차, 필요한 서류 및 마감일 등에 대한 구체적인 안내를 제공합니다."
+      ]
+  },
+
+  {
+      FAQ: [
+        "သင်သည်ဘာကိုရှာဖွေနေသလဲ။ <br> သင့်ပြproblemာများအတွက် အမြန်ဖြေရှင်းနည်းများကို မကြာခဏမေးမြန်းသည့်မေးခွန်းများမှ ရှာဖွေပါ။"
+      ],
+      Questions: [
+        "ဘာသာစကားကျောင်းက ဘာသာစကားသင်တန်းများ ဘာတွေကိုပေးသလဲ?",
+        "TOPIK စာမေးပွဲဖြေရန် သင်တန်းကို ဘယ်လိုကျင်းပသလဲ?",
+        "ကိုရီးယားပြည်တွင် တက္ကသိုလ်တက်ရောက်ရန် လိုအပ်သော အခြေအနေများက ဘာတွေလဲ?",
+        "ကိုရီးယားပြည်တွင် တက္ကသိုလ်များသို့ တင်သွင်းရန် အထောက်အကူပြု ဝန်ဆောင်မှုများ ဘာတွေကို ပေးသလဲ?",
+        "ဘာသာစကားကျောင်းက ပေးသည့် အလုပ်အကိုင်ရရှိရေး ဝန်ဆောင်မှုသည် ဘယ်လိုလုပ်ဆောင်သလဲ?",
+        "ကျောင်းခ လက်မှတ်ကုန်ကျစရိတ် က ဘယ်လောက်ရှိသလဲ၊ ဘယ်လိုပေးချေရန်နည်းလမ်းများ ရှိသလဲ?",
+        "ကိုရီးယားပြည်တွင် နေရန် လိုအပ်သော အခြေခံသတင်းအချက်အလက်များက ဘာတွေရှိသလဲ?",
+        "ဘာသာစကားကျောင်းတွင် ရှာဖွေရန်ဘယ်လိုလုပ်ဆောင်ရမလဲ?"
+      ],
+      Answers: [
+        "ကျောင်းသားများသည် သင်တန်းများ၏ ရည်ရွယ်ချက်နှင့် အကြောင်းအရာများကို အလွယ်တကူနားလည်နိုင်အောင် ရှင်းပြသည်။",
+        "TOPIK စာမေးပွဲ၏ အရေးပါမှုနှင့် အသင့်ဖြေဆိုရန် နည်းလမ်းများအကြောင်း အချက်အလက်များ ပေးသည်။",
+        "တက္ကသိုလ်များ၏ ဝင်ခွင့်အရည်အချင်းများ၊ လိုအပ်သောစာရွက်စာတမ်းများနှင့် အကြံပြုစာများအကြောင်း အချက်အလက်များကို အကူအညီပေးသည်။",
+        "တက္ကသိုလ်တင်သွင်းခြင်း၊ စာရွက်စာတမ်းပြင်ဆင်ခြင်း၊ မေးမြန်းချိန်ကို ပြင်ဆင်ခြင်း စသည့် အထောက်အကူပြု ဝန်ဆောင်မှုများကို ရှင်းပြသည်။",
+        "ကျောင်းသားများ အလုပ်ရရှိနိုင်ရန် ဘယ်လိုရှာဖွေရန်နည်းလမ်းများရှိသလဲ၊ ကျွန်ုပ်တို့သည် ဘယ်သင်္ကေတလုံးများနှင့် ဖက်လုံးထားကြသည်ဟူသော အချက်အလက်များကို ရှင်းပြသည်။",
+        "ကျောင်းခ၊ အထောက်အပံ့ပေးခြင်း၊ အပိုင်းပိုင်းပေးချေခြင်းတို့အကြောင်း အချက်အလက်များကို ရှင်းပြသည်။",
+        "ကိုရီးယားပြည်တွင် နေအိမ်၊ ကားဆောင်ရွက်မှုနှင့် နေထိုင်မှုစရိတ်အကြောင်း အသုံးဝင်သော အချက်အလက်များကို ရှင်းပြသည်။",
+        "မှတ်ပုံတင်ခြင်းလုပ်ငန်းစဉ်၊ လိုအပ်သောစာရွက်စာတမ်းများနှင့် နောက်ဆုံးရက်များအကြောင်း အသေးစိတ်လမ်းညွှန်ချက်များကို ပေးသည်။"
+      ]
+  }
+];
+
+  function changeLanguage() {
+      currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
+      updateContent();
+  }
+
+  function updateContent() {
+      const { FAQ } = languages[currentLanguageIndex];
+      document.getElementById("FAQ").innerHTML = FAQ.map(item => `<li>${item}</li>`).join('');
+
+      const { Questions, Answers } = languages[currentLanguageIndex];
+    
+      Questions.forEach((question, index) => {
+        document.getElementById(`question-${index + 1}`).innerHTML = question;
+        document.getElementById(`answer-${index + 1}`).innerHTML = Answers[index];    
+      });
+  }
+
+  // 언어 선택 아이콘 추가
+  const languageSelector = document.createElement('div');
+  languageSelector.className = 'language-selector';
+  languageSelector.innerHTML = '<i class="fa-solid fa-language"></i>';
+  languageSelector.onclick = changeLanguage;
+  document.body.appendChild(languageSelector);
+
+  updateContent(); // 초기 콘텐츠 업데이트
+</script>
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="footer-logo">
+        <img src="images/logo_transparent.png" alt="Yedang logo image" width="180" height="80"> 
+        <p class="footer-text"> &copy; Ye Dang Korean Language & Training Center</p>
+    </div>
+    <div class="footer-contact">
+        <strong>Contact Us</strong> <br> 
+        T (+95) 09-793-326347 / (+95) 09-987-040125 <br><br>
+        <strong>Ye Dang <br> Korean Language & Training Center</strong> <br> 
+        No 36, Aung Thu Kha Road, Yangon, Myanmar <br><br>  
+    </div>
+  </footer>
+
+
+
+  <div class="top-button">
+    <a href="javascript: window.scrollTo(0,0);">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+  </div>
+
+</body>
+</html>

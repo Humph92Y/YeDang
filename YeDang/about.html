@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ye Dang Korean Language and Training Center located in Myanmar - TOPIK Preparation, 미얀마에 위치한 한국어 어학원 예당 - TOPIK 준비, 한국 유학 준비 과정">
+    <title>YeDang Korean Language Center</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="icon" href="images/logo.jpeg">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ce850c15f9.js" 
+    crossorigin="anonymous"></script>
+
+</head>
+  
+<body>
+
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <a href="index.html">
+                <img src="images/logo_transparent.png" alt="Yedang logo image" width="100" height="50">
+            </a>
+        </div>
+        
+        <div class="navbar_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#courses">Course</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar_links">
+            <div class="navbar_links">
+                <a href="https://www.facebook.com/YedangKoreanLanguage.TrainingCenter" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://maps.app.goo.gl/T7eN8KA1kTMSNK1g9" target="_blank">
+                    <i class="fa-solid fa-map"></i>
+                </a>
+            </div>
+        </div>
+
+        <button class="navbar_toggleBtn">
+            <i class="fa fa-bars"></i>
+        </button>
+
+    </nav>
+
+
+
+
+
+    <header>
+        <h1>Start your Korean language journey <br> with us from the very beginning! <br> 
+            <p>Ye Dang Korean Language Center</p></h1>
+    </header>
+    
+    <br><br><br><br>
+
+    <h2 id="introduction">
+    </h2>
+
+    <br><br><br>
+
+    <h3>
+        Unlock opportunities in Korea <br>
+        <hr style="width: 50%; height: 2px; border: none; background-color: #666;">
+        <ul id="opportunityContent"></ul>
+    </h3>
+    
+    
+    
+    
+
+    <br><br><br>
+
+    <h4>
+        KOREAN COURSES <br>
+        <hr style="width: 50%; height: 2px; border: none; background-color: #666;">
+        <p id="KoreanCourses"></p>
+    </h4>
+
+<br><br><br><br><br>
+
+
+    <h5>
+        Class Types <br>
+        <hr style="width: 50%; height: 2px; border: none; background-color: #666;">
+        <div class="wrapper">
+            <div id="ClassTypes1" class="container">
+                <div class="box"><p id="classType1_1"></p></div>
+                <div class="box"><p id="classType1_2"></p></div>
+                <div class="box"><p id="classType1_3"></p></div>
+                <div class="box"><p id="classType1_4"></p></div>
+                <div class="box"><p id="classType1_5"></p></div>
+            </div>
+            <div id="ClassTypes2" class="container2">
+                <div class="box1"><p id="classType2_1"></p></div>
+                <div class="box1"><p id="classType2_2"></p></div>
+                <div class="box1"><p id="classType2_3"></p></div>
+                <div class="box1"><p id="classType2_4"></p></div>
+                <div class="box1"><p id="classType2_5"></p></div>
+            </div>
+        </div>
+    </h5>
+    
+
+   
+
+    <h6>
+        Photos
+        <hr style="width: 50%; height: 2px; border: none; background-color: #666;">
+    </h6>
+
+    <span class="slideshow-container">
+        <div class="Slidesbackground">
+           <div class="mySlides fade">
+           <img src="images/center1.JPG" class="slideshow-image">
+           </div>
+           <div class="mySlides fade">
+               <img src="images/center2.JPG" class="slideshow-image">
+           </div>
+           <div class="mySlides fade">
+               <img src="images/center3.JPG" class="slideshow-image">
+           </div>
+           <div class="mySlides fade">
+               <img src="images/center4.JPG" class="slideshow-image">
+           </div>
+           <div class="mySlides fade">
+               <img src="images/center5.JPG" class="slideshow-image">
+           </div>
+           <div class="mySlides fade">
+               <img src="images/center6.JPG" class="slideshow-image">
+           </div>
+           <div class="mySlides fade">
+                <img src="images/center7.JPG" class="slideshow-image">
+           </div>
+       </div>
+    </span>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+       
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+    
+        setTimeout(showSlides, 4000); // 4초마다 이미지가 체인지됩니다
+    }
+</script>
+
+
+<script>
+    const toggleBtn = document.querySelector('.navbar_toggleBtn');
+    const menu = document.querySelector('.navbar_menu ul');
+
+    toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('active'); // 'active' 클래스 토글
+    });
+
+    // 메뉴 클릭 시 배경색 변경 (PC, 모바일 공통)
+    const menuLinks = document.querySelectorAll('.navbar_menu ul li a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // 모든 링크의 배경색 초기화
+            menuLinks.forEach(l => l.style.backgroundColor = '');
+
+            // 클릭한 링크만 배경색 변경
+            e.target.style.backgroundColor = '#e9ecef';
+        });
+    });
+</script>
+
+
+
+
+
+<!--  https://eunhee-programming.tistory.com/106
+     https://hansacanada.com/home/
+     https://unsplash.com/ko/s/%EC%82%AC%EC%A7%84/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-k-pop
+-->
+    
+    
+
+
+
+
+
+
+<script>
+let currentLanguageIndex = 0;
+const languages = [
+    {
+        introduction: [
+            "Founded in 2023, Yedang Korean Language Center in Myanmar is dedicated to inspiring local students by teaching not only the Korean language but also its vibrant culture. Our mission is to help students who dream of a future in Korea by providing them with the skills and understanding they need to thrive in both the language and the rich cultural landscape of Korea. At Yedang, we empower the next generation to turn their Korean dreams into reality."
+        ],
+        opportunityContent: [
+            "<span class='highlight'>Korean Language Courses:</span> Learn basic Korean, with classes focused on K-pop and culture.",
+            "<span class='highlight'>Full Support for University Admission:</span> Complete guidance to help you enter Korean universities.",
+            "<span class='highlight'>Work Opportunities:</span> Gain part-time jobs at partner companies while you study.",
+            "<span class='highlight'>Financial Benefits:</span> Earn higher wages in Korea compared to Myanmar.",
+            "<span class='highlight'>Achieve Your 'Korean Dream':</span> Study, work, and build a brighter future in Korea."
+        ],
+        KoreanCourses: [
+            "Study Korean in Myanmar at Ye Dang Korean Language Center, where learning is both personalized and enjoyable. Whether you're a beginner or advanced, we offer tailored classes designed to fit your level after a personal consultation. At Ye Dang, we believe in making language learning an exciting experience, not just a task-immerse yourself in Korean language and culture in a fun, interactive environment. <br> <br> Take the first step toward your Korean dream with us, and enjoy the journey as you master Korean!"
+        ],
+        ClassTypes1: [
+            "Regular",
+            "Private",
+            "Online Class",
+            "TOPIK",
+            "Intensive Speaking Class"
+        ],
+        ClassTypes2: [
+            "Monthly classes for students of the same level to study together",
+            "Customized 1:1 lessons tailored to meet each student's individual needs",
+            "Flexible online Korean classes without time or location constraints",
+            "TOPIK preparation courses designed for levels 3 to 6",
+            "Pronunciation correction and specialized speaking improvement classes"
+        ]
+
+    },
+
+    {
+        introduction: [
+            "2023년에 설립된 예당 한국어 학원은 미얀마 학생들에게 한국어뿐만 아니라 그 풍부한 문화를 가르치며 영감을 주고 있습니다. 저희의 사명은 한국에서의 미래를 꿈꾸는 학생들이 언어와 한국의 풍부한 문화적 배경 속에서 성공할 수 있도록 필요한 기술과 이해를 제공하는 것입니다. 예당에서 우리는 다음 세대가 그들의 한국 꿈을 현실로 이루도록 돕고 있습니다."
+        ],
+        opportunityContent: [
+            "<span class='highlight'>한국어 과정:</span> K-pop과 문화를 중점적으로 배우는 기초 한국어 수업.",
+            "<span class='highlight'>대학 입학 지원 전폭 지원:</span> 한국 대학 진학을 위한 완벽한 안내.",
+            "<span class='highlight'>취업 기회:</span> 학업 중 파트타임으로 일할 수 있는 기업과의 연계.",
+            "<span class='highlight'>재정적 혜택:</span> 한국에서의 급여는 미얀마보다 높습니다.",
+            "<span class='highlight'>당신의 '한국 꿈'을 이루세요:</span> 공부하고 일하며 한국에서 더 밝은 미래를 만들어 보세요."
+        ],
+        KoreanCourses: [
+            "미얀마의 예당 한국어 학원에서 한국어를 배우세요. 여기서는 학습이 개인 맞춤형이며 즐거운 경험이 됩니다. 초보자든 고급자든, 우리는 개인 상담 후 여러분의 수준에 맞춘 맞춤형 수업을 제공합니다. 예당에서는 언어 학습을 단순한 작업이 아닌 흥미로운 경험으로 만들어야 한다고 믿습니다. 즐겁고 상호작용이 있는 환경에서 한국어와 문화를 깊이 있게 체험해 보세요. <br><br> 저희와 함께 한국 꿈을 향한 첫걸음을 내딛고, 한국어를 익히며 여정을 즐기세요!"
+        ],
+        ClassTypes1: [
+            "정규 수업",
+            "개인 수업",
+            "온라인 수업",
+            "TOPIK 수업",
+            "집중 회화 수업"
+        ],
+        ClassTypes2: [
+            "같은 수준의 학생들이 함께 공부하는 월간 수업",
+            "각 학생의 개별 요구에 맞춘 맞춤형 1:1 수업",
+            "시간이나 장소 제약 없이 유연한 온라인 한국어 수업",
+            "3급부터 6급까지를 위한 TOPIK 준비 과정",
+            "발음 교정 및 전문적인 회화 개선 수업"
+        ]
+    },
+
+    {
+        introduction: [
+            "2023 ခုနှစ်တွင် စတင်တည်ထောင်ခဲ့သည့် Yedang ကိုရီးယားဘာသာစကား သင်တန်းကျောင်းသည် မြန်မာကျောင်းသားများအား ကိုရီးယားဘာသာစကား သာမက သူ၏ သဘာဝယဉ်ကျေးမှုကိုလည်း သင်ကြားပေးလျက်ရှိသည်။ ကျွန်ုပ်တို့၏ သဘောတရားမှာ ကိုရီးယားနိုင်ငံတွင် အနာဂတ်ကိုအောင်မြင်မှုတွင် မြန်မာကျောင်းသားများအား ကူညီပေးရန် ဖြစ်ပြီး ဘာသာစကားနှင့် ယဉ်ကျေးမှုဆိုင်ရာနားလည်မှုများကို ရရှိစေရန် ကြိုးပမ်းနေပါသည်။ Yedangတွင် ကျောင်းသားများ၏ ကိုရီးယားအိပ်မက်များကို အမှန်တကယ်ဖြစ်စေရန် အားဖြည့်ပေးလျက်ရှိပါသည်။"
+        ],
+        opportunityContent: [
+            "<span class='highlight'>ကိုရီးယားဘာသာစကားစာသင်ခန်းများ:</span> K-pop နှင့် ယဉ်ကျေးမှုအထူးပြု သင်ခန်းစာများဖြင့် အခြေခံ ကိုရီးယားဘာသာကို လေ့လာပါ။",
+            "<span class='highlight'>တက္ကသိုလ်ဝင်ခွင့်အတွက် အပြည့်အဝထောက်ပံ့မှု:</span> ကိုရီးယားတက္ကသိုလ်များသို့ ဝင်ခွင့်ရဖို့ လမ်းညွှန်မှုကို အပြည့်အဝထောက်ပံ့ပေးပါသည်။",
+            "<span class='highlight'>အလုပ်အကိုင်အခွင့်အလမ်းများ:</span> သင်တန်းလေ့လာနေစဉ်အတွင်း ပူးပေါင်းထားသော ကုမ္ပဏီများတွင် အလုပ်လုပ်ပါ။",
+            "<span class='highlight'>ငွေကြေးအကျိုးအမြတ်များ:</span> ကိုရီးယားတွင် ဝင်ငွေများသည် မီယန်းမာနှင့် နှိုင်းယှဉ်လျှင် အမြင့်ဆုံးဖြစ်သည်။",
+            "<span class='highlight'>သင်၏ 'ကိုရီးယားအိပ်မက်' ရှာဖွေရန်:</span> သင်ယူပြီး လုပ်ကိုင်ပါ၊ ကိုရီးယားတွင် အနာဂတ်မိုးအာဖာတည်ဆောက်ပါ။"
+        ],
+        KoreanCourses: [
+            "မြန်မာနိုင်ငံရှိ Ye Dang ကိုရီးယားဘာသာကျောင်းတွင် ကိုရီးယားဘာသာစကားကို သင်ယူပါ။ ဒီမှာ သင်ယူမှုသည် ကိုယ်ပိုင်လိုက်ဖက်မှုနှင့် ပျော်ရွှင်စရာဖြစ်ပါသည်။ သင်ဟာ စတင်နေသူဖြစ်စေ သို့မဟုတ် မြင့်မားသူဖြစ်စေ၊ ကျွန်ုပ်တို့သည် သင့်အဆင့်ကို လိုက်ဖက်စွာ အမည်စဉ်ပြုမူတည်ဆောက်ထားသော သင်တန်းများကို ပေးဆောင်ပါသည်။ Ye Dang တွင် သင်ယူမှုသည် အလုပ်ဖြစ်ခြင်းမဟုတ်ပါ၊ သင်နောက်လှမ်းရန် ကျွန်ုပ်တို့ ယုံကြည်ပါတယ်။ သင့်အတွက် ပျော်စရာနှင့် အပြန်အလှန်ပြောဆိုခြင်းဖြင့် ကိုရီးယားဘာသာနှင့် ယဉ်ကျေးမှုကို အထူးအလေးထားထားလိုက်ပါ။ <br><br> သင်၏ ကိုရီးယားအိပ်မက်သို့ ပထမဆုံးအဆင့်ကို ကျွန်ုပ်တို့နှင့်အတူ လှမ်းခဲ့ပြီး ကိုရီးယားဘာသာကို အတူတူ လေ့လာရင်း ခရီးကို ခံစားပါ!"
+        ],
+        ClassTypes1: [
+            "သံတမန်သင်တန်း",
+            "ကိုယ်ပိုင်သင်တန်း",
+            "အွန်လိုင်းသင်တန်း",
+            "TOPIK သင်တန်း",
+            "အထူးပြု အကြောင်းပြောသင်တန်း"
+        ],
+        ClassTypes2: [
+            "တူညီသော အဆင့်ရှိ ကျောင်းသားများအတွက် အတူလေ့လာရန် လစဉ် သင်တန်းများ",
+            "ကျောင်းသားတိုင်း၏ အလိုအလျောက်လိုအပ်ချက်များကို ဖြည့်ဆည်းရန် အထူးပြု 1:1 သင်တန်းများ",
+            "ကျောင်းသားတိုင်း၏ အလိုအလျောက်လိုအပ်ချက်များကို ဖြည့်ဆည်းရန် အထူးပြု 1:1 သင်တန်းများ",
+            "၃ နှစ်မှ ၆ နှစ်အထိ TOPIK ပြင်ဆင်သင်တန်းများ",
+            "အသံထွက်ပြင်ဆင်မှုနှင့် အထူးပြု အကြောင်းပြော လေ့ကျင့်မှု သင်တန်းများ"
+        ]
+    }
+];
+
+function changeLanguage() {
+    currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
+    updateContent();
+}
+
+function updateContent() {
+    const { introduction } = languages[currentLanguageIndex];
+    document.getElementById("introduction").innerHTML = introduction.map(item => `<li>${item}</li>`).join('');
+    
+    const { opportunityContent } = languages[currentLanguageIndex];
+    document.getElementById("opportunityContent").innerHTML = opportunityContent.map(item => `<li>${item}</li>`).join('');
+
+    const { KoreanCourses } = languages[currentLanguageIndex];
+    document.getElementById("KoreanCourses").innerHTML = KoreanCourses.map(item => `<li>${item}</li>`).join('');
+
+    const { ClassTypes1 } = languages[currentLanguageIndex];
+    ClassTypes1.forEach((item, index) => {
+        document.getElementById(`classType1_${index + 1}`).innerHTML = item;
+    });
+
+    const { ClassTypes2 } = languages[currentLanguageIndex];
+    ClassTypes2.forEach((item, index) => {
+        document.getElementById(`classType2_${index + 1}`).innerHTML = item;
+    });
+}
+
+// 언어 선택 아이콘 추가
+const languageSelector = document.createElement('div');
+languageSelector.className = 'language-selector';
+languageSelector.innerHTML = '<i class="fa-solid fa-language"></i>';
+languageSelector.onclick = changeLanguage;
+document.body.appendChild(languageSelector);
+
+updateContent(); // 초기 콘텐츠 업데이트
+
+</script>
+
+
+
+
+
+
+
+<br><br>
+
+
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/logo_transparent.png" alt="Yedang logo image" width="180" height="80"> 
+            <p class="footer-text"> &copy; Ye Dang Korean Language & Training Center</p>
+        </div>
+        <div class="footer-contact">
+            <strong>Contact Us</strong> <br> 
+            T (+95) 09-793-326347 / (+95) 09-987-040125 <br><br>
+            <strong>Ye Dang <br> Korean Language & Training Center</strong> <br> 
+            No 36, Aung Thu Kha Road, Yangon, Myanmar <br><br>  
+        </div>
+    </footer>
+
+    <div class="top-button">
+        <a href="javascript: window.scrollTo(0,0);">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </div>
+
+
+
+
+
+    
+</body>
+</html>

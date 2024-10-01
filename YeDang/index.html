@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ye Dang Korean Language and Training Center located in Myanmar - TOPIK Preparation, 미얀마에 위치한 한국어 어학원 예당 - TOPIK 준비, 한국 유학 준비 과정">
+    <title>YeDang Korean Language Center</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="icon" href="images/logo.jpeg">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ce850c15f9.js" 
+    crossorigin="anonymous"></script>
+</head>
+  
+<body>
+
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <a href="index.html">
+                <img src="images/logo_transparent.png" alt="Yedang logo image" width="100" height="50">
+            </a>
+        </div>
+        
+        <div class="navbar_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#courses">Course</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar_links">
+            <div class="navbar_links">
+                <a href="https://www.facebook.com/YedangKoreanLanguage.TrainingCenter" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://maps.app.goo.gl/T7eN8KA1kTMSNK1g9" target="_blank">
+                    <i class="fa-solid fa-map"></i>
+                </a>
+            </div>
+        </div>
+
+        <button class="navbar_toggleBtn">
+          <i class="fa fa-bars"></i>
+        </button>
+
+    </nav>
+
+
+<script defer>
+        const toggleBtn = document.querySelector('.navbar_toggleBtn');
+        const menu = document.querySelector('.navbar_menu ul');
+    
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('active'); // 'active' 클래스 토글
+        });
+    
+        const menuLinks = document.querySelectorAll('.navbar_menu ul li a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                menuLinks.forEach(l => l.style.backgroundColor = '');
+                e.target.style.backgroundColor = '#e9ecef';
+            });
+        });
+</script>
+
+
+
+    <header>
+        <h1>Start your Korean language journey <br> with us from the very beginning! <br> 
+            <p>Ye Dang Korean Language Center</p></h1>
+    </header>
+
+
+<br><br><br><br><br>
+
+    <h2>
+        WHY YEDANG? <br> 
+        <hr style="width: 50%; height: 2px; border: none; background-color: #666;">
+        <ul id="whycontent"></ul>
+    </h2>
+
+    <br><br><br><br><br>
+
+
+    <h3>
+        Programs
+        <hr style="width: 50%; height: 2px; border: none; background-color: #666;">
+    </h3>
+
+    <div class="slide-wrapper">
+        <div class="slidewrap">
+            <div class="slides">
+                <div class="section1 slide"></div>
+                <div class="section2 slide"></div>
+                <div class="section3 slide"></div>
+                <div class="section4 slide"></div>
+            </div>
+        </div>
+        <div class="btn-container">
+            Shortcut
+            <button class="button">Button 1</button>
+            <button class="button">Button 2</button>
+            <button class="button">Button 3</button>
+            <button class="button">Button 4</button>
+        </div>
+    </div>
+    
+    
+
+<script>
+//기본적인 슬라이드 정보 얻어두기
+const slidewrap = document.querySelector(".slidewrap");
+const slidescnt = document.querySelectorAll(".slide").length;
+const slideContainer = document.getElementsByClassName("slides");
+const slideWidth = slidewrap.offsetWidth;
+let currentSlide = 0;
+
+/*  공통으로 이용할 함수
+        슬라이드 이동 함수
+            해당 기능에는 페이지네이션 HTML에 class를 이동하여 현 위치를 마크해야함
+        CSS 삽입 함수
+*/
+
+//슬라이드 이동 함수
+function goToSlide(index){
+    currentSlide = index;
+    slideContainer[0].style.transition = 'transform 0.5s ease';
+    slideContainer[0].style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+
+    //페이지네이션 Class 부여하기
+    const pagination = document.querySelectorAll(".pagination li");
+    for (let i = 0 ; i < pagination.length ; i++){
+        if(i === index){
+            pagination[i].classList.add("act");
+            continue;
+        }
+        pagination[i].classList.remove("act");
+    }
+}
+
+//CSS 삽입 함수
+function AddStyle(style){
+    const styleTag = document.createElement('style');
+    styleTag.innerHTML = style;
+    document.head.appendChild(styleTag);
+}
+
+/*  페이지네이션 생성 함수
+        HTML 삽입
+        CSS 삽입 (공통함수 사용)
+        페이지네이션 이벤트 등록 (공통함수 이벤트 함수)
+*/
+
+// 페이지네이션 생성
+function Createpagination(){
+    //HTML Tag 생성
+    slidewrap.innerHTML += `<div class="pagination"></div>`;
+    const pagination = document.querySelector(".pagination");
+    for (let i = 1 ; i < slidescnt; i++){
+        if(i===1){pagination.innerHTML += `<li class="act"><a>•</a></li>`;}
+        pagination.innerHTML += `<li><a>•</a></li>`;
+    }
+
+    //CSS 생성
+    const paginationStyle = `
+        .pagination {
+            display : flex;
+            position : absolute;
+            left : 50%;
+            transform: translateX(-50%);
+            bottom : 0;
+        }
+        .pagination li{
+            font-size : 50px;
+            list-style: none;
+            color:  white;
+            opacity: 0.5;
+        }
+        .pagination .act{
+            opacity: 1;
+        }
+    `
+    AddStyle(paginationStyle);
+
+    //페이지네이션 이벤트 생성
+    const paginationlink = document.querySelectorAll(".pagination li a");
+    paginationlink.forEach((link, index) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault(); // 기본 앵커 링크 동작을 막습니다.
+          goToSlide(index);
+        });
+    });
+}
+
+/*  버튼 생성 함수
+        HTML 삽입
+        CSS 삽입 (공통함수 사용)
+        버튼 이벤트 등록 (공통함수 이벤트 함수)
+*/
+// 버튼생성
+function Createbtn(){
+    //HTML Tag 생성
+    slidewrap.innerHTML += `<div class="leftbtn btn">Prev</div>`;
+    slidewrap.innerHTML += `<div class="rightbtn btn">Next</div>`;
+    //CSS 생성
+    const BtnStyle = `
+        .btn {
+            display : flex;
+            position : absolute;
+            bottom : calc(50% - 60px);
+            width: 100px;
+            height : 60px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        .leftbtn{
+            left : 20px;
+        }
+        .rightbtn{
+            right : 20px;
+        }
+
+        @media all and (max-width: 767px) {
+            .btn {
+                width: 60px;
+                height: 40px;
+                font-size: 20px;
+                bottom: calc(50% - 40px); /* 모바일에서의 위치 조정 */
+            }
+            .leftbtn {
+                left: 10px;
+            }
+            .rightbtn {
+                right: 10px;
+            }
+        }
+    `
+    AddStyle(BtnStyle);
+    
+    //버튼 이벤트 생성
+    const BtnL = document.querySelector(".leftbtn");
+    BtnL.addEventListener('click',(event)=>{
+        event.preventDefault(); // 기본 앵커 링크 동작을 막습니다.
+        const index = (currentSlide-1) >=0 ? currentSlide-1 : slidescnt-1; // 삼항 연산을 통해 페이지 이동 최소 값 제한
+        goToSlide(index);
+    })
+    const BtnR = document.querySelector(".rightbtn");
+    BtnR.addEventListener('click',(event)=>{
+        event.preventDefault(); // 기본 앵커 링크 동작을 막습니다.
+        const index = (currentSlide+1) < slidescnt ? currentSlide+1 : 0; //삼항 연산을 통해 페이지 이동 최대 값 제한
+        goToSlide(index);
+    })    
+}
+/* 슬라이드 터치 또는 스와이프 생성 함수
+
+*/
+// 사용할 변수 
+let startpos = 0;
+let endpos = 0;
+function Createdrag(){
+    //마우스를 클릭 시작
+    slideContainer[0].addEventListener("mousedown",(event)=>{
+        startpos = event.pageX;
+    })
+    //마우스를 클릭 해제
+    slideContainer[0].addEventListener("mouseup",(event)=>{
+        endpos = event.pageX;
+
+        //시작과 종료 지점의 포지션 값 비교 후 슬라이드 이동 실행 및 초기화
+        if (startpos < endpos){
+            const index = (currentSlide-1) >=0 ? currentSlide-1 : slidescnt-1; // 삼항 연산을 통해 페이지 이동 최소 값 제한
+            goToSlide(index);
+        }
+        else{
+            const index = (currentSlide+1) < slidescnt ? currentSlide+1 : 0; //삼항 연산을 통해 페이지 이동 최대 값 제한
+            goToSlide(index);
+        }
+        //pos 값 초기화
+        startpos = 0;
+        endpos = 0;
+
+    })
+    //터치 시작
+    slideContainer[0].addEventListener("touchstart",(event)=>{
+        startpos = event.touches[0].pageX;
+    })
+    //터치 해제
+    slideContainer[0].addEventListener("touchend",(event)=>{
+        endpos = event.touches[0].pageX;
+
+        //시작과 종료 지점의 포지션 값 비교 후 슬라이드 이동 실행 및 초기화
+        if (startpos < endpos){
+            const index = (currentSlide-1) >=0 ? currentSlide-1 : slidescnt-1; // 삼항 연산을 통해 페이지 이동 최소 값 제한
+            goToSlide(index);
+        }
+        else{
+            const index = (currentSlide+1) < slidescnt ? currentSlide+1 : 0; //삼항 연산을 통해 페이지 이동 최대 값 제한
+            goToSlide(index);
+        }
+                //pos 값 초기화
+                startpos = 0;
+                endpos = 0;
+    })
+}
+/*  무한 루프 자동 슬라이드 구현 (사실 next slide일 뿐)
+
+*/
+let Autoslideactive = null ; // 슬라이드 자동 이동 호출을 변수 화
+function autoslide(){
+    const index = (currentSlide+1) < slidescnt ? currentSlide+1 : 0;
+    goToSlide(index);
+}
+
+/*  마우스 감지 시 슬라이드 자동 멈추기
+
+*/
+function Createmousedetector(){
+    //마우스가 슬라이드에 올라왔을 때
+    slideContainer[0].addEventListener("mouseover",(event)=>{
+        clearInterval(Autoslideactive);
+    })
+    //마우스가 슬라이드에서 나온 경우 다시 실행
+    slideContainer[0].addEventListener("mouseout",(event)=>{
+        Autoslideactive = setInterval(autoslide,2000);
+    })
+}
+//웹 브라우저 시작
+Createpagination();
+Createbtn();
+Createdrag();
+Autoslideactive = setInterval(autoslide,3000); //일정 시간마다 호출
+Createmousedetector();
+</script>
+
+
+<br><br><br><br><br>
+
+<h4>
+    <div>
+        Contat Us <br>
+        <hr style="width: 50%; height: 2px; border: none; background-color: #666;"> 
+        <li class="contactus_firstli">Ye Dang Korean Language & Training Center</li> <br>
+        <li id="contactus" onclick="document.location.href='tel:+9509793326347'">Tel: <br>(+95) 09-793-326347</li>
+        <li id="contactus" onclick="document.location.href='tel:+9509987040125'">(+95) 09-987-040125</li><br>
+        <li>Address: No 36, Aung Thu Kha Road, Yangon, Myanmar </li>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.925073967577!2d96.13604797597701!3d16.879600583923583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c195ab4d83e26b%3A0xc36822bf64651ba5!2sYe%20Dang%20Korean%20Language%20%26%20Training%20Center!5e0!3m2!1sko!2skr!4v1727155741187!5m2!1sko!2skr" 
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+</h4>
+
+
+<script>
+    let currentLanguageIndex = 0;
+    const languages = [
+    {
+        whycontent: [
+        "Gain fluency in Korean while mastering valuable skills that prepare you for university admission in Korea",
+        "Enjoy a seamless transition into Korean university life, with our support every step of the way",
+        "Benefit from partnerships with top companies and organizations in Korea, offering job opportunities during your studies",
+        "Experience a unique study-abroad system that combines education with practical work experience, reducing the financial burden", 
+        "Stand out from other students with our exclusive, job-focused apporach to studying and living in Korea"
+        ]
+    },
+
+    {
+        whycontent: [
+        "한국어를 유창하게 구사하며, 한국 대학 입학을 준비하는 데 필요한 소중한 기술을 습득하세요",
+        "한국 대학 생활로의 원활한 전환을 위해, 모든 과정을 지원합니다",
+        "한국의 주요 기업 및 기관과의 파트너십을 통해 학업 중에 취업 기회를 누릴 수 있습니다",
+        "교육과 실무 경험을 결합한 독특한 유학 시스템을 경험하며, 재정적인 부담을 줄일 수 있습니다", 
+        "한국에서의 학업과 생활을 위한 독점적인 취업 중심 접근 방식으로 다른 학생들과 차별화되세요"
+        ]
+    },
+
+    {
+        whycontent: [
+        "ကားတက္ကသိုလ်သို့ တက်ရောက်ရန်လိုအပ်သော ကျွမ်းကျင်မှုများကို အထောက်အကူပြု၍ ကိုရီးယားဘာသာစကားကို အထိရောက်စွာ လေ့လာပါ။",
+        "ကျွန်ုပ်တို့၏ အထောက်အကူဖြင့် ကိုရီးယား တက္ကသိုလ်အတွင်းသို့ အဆင်ပြေစွာ ရောက်ရှိနိုင်ပါသည်။",
+        "ကိုရီးယားရှိ ထိပ်တန်း ကုမ္ပဏီများနှင့် အဖွဲ့အစည်းများနှင့် ပူးပေါင်းဆောင်ရွက်ခြင်းအားဖြင့် သင့်တက်ရောက်နေစဉ် အလုပ်အကိုင် အခွင့်အလမ်းများကို ရရှိနိုင်ပါသည်။",
+        "ပညာရေးနှင့် လက်တွေ့အတွေ့အကြုံကို အတူတူ ပေါင်းစပ်ထားသော သ.unique အတန်းကျောင်းစနစ်ကို ကြုံတွေ့ပြီး ဘဏ္ဍာရေးအထိမ်းအမှတ်များကို လျှော့ချနိုင်ပါသည်။", 
+        "ကိုရီးယားတွင် သင်ယူခြင်းနှင့် နေထိုင်ခြင်းအတွက် တစ်ဦးထူးခြားသော အလုပ်အခြေခံ နည်းလမ်းဖြင့် အခြားကျောင်းသားများထက် ခွဲခြားနိုင်ပါသည်။"
+        ]
+    }
+];
+
+    function changeLanguage() {
+        currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
+        updateContent();
+    }
+
+    function updateContent() {
+        const { whycontent } = languages[currentLanguageIndex];
+        document.getElementById("whycontent").innerHTML = whycontent.map(item => `<li>${item}</li>`).join('');
+    }
+
+    // 언어 선택 아이콘 추가
+    const languageSelector = document.createElement('div');
+    languageSelector.className = 'language-selector';
+    languageSelector.innerHTML = '<i class="fa-solid fa-language"></i>';
+    languageSelector.onclick = changeLanguage;
+    document.body.appendChild(languageSelector);
+
+    updateContent(); // 초기 콘텐츠 업데이트
+</script>
+
+
+
+
+
+
+
+
+
+
+<!--  https://eunhee-programming.tistory.com/106
+     https://hansacanada.com/home/
+     https://unsplash.com/ko/s/%EC%82%AC%EC%A7%84/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-k-pop
+-->
+    
+    
+
+
+
+<br><br><br><br><br>
+
+    <img src="images/banner.JPG" class="banner_img">
+
+<br>
+
+<footer>
+    <div class="footer-logo">
+        <img src="images/logo_transparent.png" alt="Yedang logo image" width="180" height="80"> 
+        <p class="footer-text"> &copy; Ye Dang Korean Language & Training Center</p>
+    </div>
+    <div class="footer-contact">
+        <strong>Contact Us</strong> <br> 
+        T (+95) 09-793-326347 / (+95) 09-987-040125 <br><br>
+        <strong>Ye Dang <br> Korean Language & Training Center</strong> <br> 
+        No 36, Aung Thu Kha Road, Yangon, Myanmar <br><br>  
+    </div>
+</footer>
+
+
+
+<div class="top-button">
+    <a href="javascript: window.scrollTo(0,0);">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+</div>
+
+
+</body>
+</html>
